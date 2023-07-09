@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Rajdev Yadav</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f1f1ff;
+        }
+        .container{
+            border-radius: 10px;
+            width: 60%;
+            height: 60vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            overflow: hidden;
+        }
+        .left-box{
+            background-color: #097;
+            height: 100%;
+            width: 35%;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .left-text{
+            width: 90%;
+            text-align: center;
+        }
+        .left-text p{
+            margin-top: 1rem;
+        }
+        .left-text a{
+            display: inline-block;
+            text-decoration: none;
+            border: 1px solid #ddd;
+            outline: none;
+            background-color: transparent;
+            border-radius: 40px;
+            height: 35px;
+            padding: 0 2rem;
+            color: white;
+            
+            cursor: pointer;
+            width: 50%;
+            margin: 2rem auto 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .right-box{
+            background-color: #fff;
+            width: 65%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .right-text{
+            width: 90%;
+            text-align: center;
+        }
+        .right-text h1{
+            color: #097;
+            margin-bottom: .5rem;
+        }
+        .input-fields {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .input-fields input{
+            height: 45px;
+            padding: 10px;
+            width: 49%;
+            margin-top: .5rem;
+            background-color: #f1f1ff;
+            border: none;
+            outline: none;
+            transition: all .5s ease;
+            border-radius: 5px;
+            color: #777;
+        }
+        .input-fields input.invalid{
+            box-shadow: 0px 0px 5px orange , 0px 0px 3px orange;
+
+        }
+        .input-fields input.valid{
+            box-shadow: 0px 0px 5px green , 0px 0px 3px green;
+
+        }
+        .input-fields input:focus{
+            box-shadow: 0px 0px 5px #098 , 0px 0px 3px #098;
+        }
+
+        .right-text button{
+            background-color: #25aa8d;
+            color: white;
+            height: 45px;
+            border-radius: 40px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 0 3rem;
+            margin-top: 1rem;
+            transition: all .5s ease;
+        }
+        .right-text button:hover{
+            background-color: #097;
+        }
+        .right-text button:focus{
+            background-color: #097;
+        }
+
+        {{!-- ---------------- mobile screen ------------------  --}}
+
+        @media (min-width:320px) and (max-width:700px) {
+            body{
+                height: auto;
+                display: block;
+            }
+            .container{
+                width: 90%;
+                height: auto;
+                display: block;
+                margin: 2rem auto;
+            }
+            .left-box{
+                width: 100%;
+                height: 40vh;
+            }
+            .right-box{
+                width: 100%;
+                height: 75vh;
+                display: block;
+            }
+            .right-text{
+                margin: auto;
+                height: 100%;
+            }
+            .right-text h1{
+                padding-top: 1rem;
+            }
+            .input-fields input {
+                width: 100%;
+            }
+        }
+
+{{!-- tablets and ipad screens --}}
+
+@media (min-width:701px) and (max-width:1024px) {
+    .container{
+        width: 80%;
+    }
+}
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left-box">
+            <div class="left-text">
+                <h1>Welcome Back!</h1>
+                <p>To keep connected with us, Please login with your personal info</p>
+                <a href="/">Login</a>
+            </div>
+        </div>
+        <div class="right-box">
+            <div class="right-text">
+                <h1>Create Account</h1>
+                <form action="/signup" method="post">
+                    <div class="input-fields">
+                        <input type="text" placeholder="First Name" name="firstName">
+                        <input type="text" placeholder="Last Name" name="lastName">
+                        <input type="text" placeholder="Phone Number" name="phoneNumber">
+                        <input type="email" placeholder="Email" name="email">
+                        <input type="text" placeholder="Username" name="userName">
+                        <input type="password" placeholder="Create Password" name="password">
+                    </div>
+
+                    <button type="submit">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+  
+</body>
+
+</html>
